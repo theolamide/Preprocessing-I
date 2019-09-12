@@ -229,7 +229,7 @@ h5 {
   }
   .topcontent .imageandtitle h2 {
     text-align: center;
-    padding: 20% 0% 20% 0%;
+    padding: 20% 0% 0% 0%;
     width: 100%;
   }
 }
@@ -298,17 +298,17 @@ h5 {
     display: flex;
     align-content: center;
     flex-direction: column;
-    padding: 4%;
+    padding: 5% 10% 5% 10%;
   }
   .middle-content .middlewords {
     width: 100%;
     padding: 0% 0% 10% 0%;
   }
-  .middle-content .middlewords table {
+  .middle-content table {
     width: 100%;
   }
-  .middle-content .middlewords table td,
-  .middle-content .middlewords table th {
+  .middle-content table td,
+  .middle-content table th {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 0px;
