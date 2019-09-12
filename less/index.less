@@ -53,7 +53,111 @@ table {
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+@navfooterbackground: #2f5947;
+@navfooterfontcolor: #ebe8ab;
+
+html {
+	height: 100%;
+	font-size:62.5%;
 }
 
+body {
+	font-family: 'Source Code Pro', monospace;
+	height: 100%;
+	font-size: 2rem;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Noto Sans KR', sans-serif;
+    letter-spacing: 1px;
+	margin-bottom: 15px;
+	font-size: 5rem;
+}
+
+// *{
+// 	border: 1px solid blue !important;
+// }
+
+.container {
+	height: 100%;
+	width: 75%;
+	margin: 0 auto;
+	padding: 2%;
+	box-sizing: border-box;	
+  }
+
+  .header{
+	background-color:@navfooterbackground;
+	color:@navfooterfontcolor;
+	padding: 2%;
+
+		.nav{
+			display:flex;
+			justify-content: space-evenly;
+
+			a{
+				font-size: 3rem;
+				font-family: 'Audiowide', regular;
+			}//this closes the anchor tag
+		}//this closes the .nav class
+  }//this closes the .header class
+
+
+  .topcontent{
+	  height: 50vh;
+		
+				img{
+					width: 40%;
+					padding: 5%;
+				}			
+		}
+
+
+  .middle-content{
+
+	display:flex;
+	justify-content: space-evenly;
+
+		h3{
+			font-size: 3rem;
+			}	
+		
+		table {
+		font-family: arial, sans-serif;
+		border-collapse: collapse;
+		width: 100%;
+	
+			td, th {
+				border: 1px solid #dddddd;
+				text-align: left;
+				padding: 8px;
+			}
+		  }
+		}
+
+
+  table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+
+	td, th {
+		border: 1px solid #dddddd;
+		text-align: center;
+		padding: 8px;
+	  }
+  }
+
+  footer{
+	  margin-top: 5%;
+	  background-color: @navfooterbackground;
+	  color:@navfooterfontcolor;
+	  padding:2%;
+	  text-align: center;
+  }
+  
+  
+  
+//   tr:nth-child(even) {
+// 	background-color: #dddddd;
+//   }
