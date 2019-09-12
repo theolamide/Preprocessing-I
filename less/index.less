@@ -56,6 +56,11 @@ table {
 @navfooterbackground: #2f5947;
 @navfooterfontcolor: #ebe8ab;
 
+.spaceevenly(){
+	display:flex;
+	justify-content:space-evenly;
+  }
+
 html {
 	height: 100%;
 	font-size:62.5%;
@@ -84,6 +89,13 @@ h1, h2, h3, h4, h5 {
 	margin: 0 auto;
 	padding: 2%;
 	box-sizing: border-box;	
+
+	@media(max-width: 500px){
+
+		width: 100%;
+		padding: 1%;
+
+	}//closes media query 400px
   }
 
   .header{
@@ -92,54 +104,210 @@ h1, h2, h3, h4, h5 {
 	padding: 2%;
 
 		.nav{
-			display:flex;
-			justify-content: space-evenly;
+			// display:flex;
+			// justify-content: space-evenly;
+			.spaceevenly();
 
 			a{
-				font-size: 3rem;
+				font-size: 2rem;
 				font-family: 'Audiowide', regular;
 			}//this closes the anchor tag
+
+			@media(max-width: 500px){
+				padding: 5%;
+				flex-direction: column;
+
+				a{
+					text-align: center;
+					padding: 5% 0% 5% 0%;			
+				}
+			}//this closes media query 500px nested in .nav
+
 		}//this closes the .nav class
+
+				@media(max-width: 500px){
+					padding: 0%;
+				}//this closes media query 500px
+
   }//this closes the .header class
 
 
   .topcontent{
-	  height: 50vh;
-		
+		  padding-bottom: 5%;
+
+		.imageandtitle{
+			display:flex;
+			justify-content: space-between;
+
 				img{
-					width: 40%;
+					width: 50%;
 					padding: 5%;
-				}			
-		}
+				}
+				//closes img
+
+				h2{
+					text-align:center;
+					padding:20% 0% 20% 0%;
+					width: 50%;
+				}//closes h2 tag
+
+				@media(max-width: 800px){
+					
+					img{
+						width: 50%;
+						padding: 5% 5% 25% 5%;
+					}//closes img tag
+
+					h2{
+						font-size: 3rem;
+						text-align:center;
+						padding:50% 0% 20% 0%;
+						width: 50%;
+					}//closes h2 tag
+
+				}//this closes 800px media 
+
+				@media(max-width: 500px){
+
+					display:flex;
+					flex-direction: column;
+
+					img{
+						width: 100%;
+						padding: 0%;
+					}//closes img
+
+					h2{
+						text-align:center;
+						padding:20% 0% 20% 0%;
+						width: 100%;
+					}//closes h2
+
+				}//closes media query 400px
+				
+		}//closes imageandtitle
+
+
+			.shpill{
+				align-content:center;
+				
+
+				p{
+					line-height: 2.5rem;
+				}//closes p tag
+
+				button {
+					background-color: #67a175;
+					color: white;
+					padding: 2%;
+					text-align: center;
+					font-size: 2rem;
+					margin: 4px 2px;
+					border-radius:10%;
+					opacity: 0.6;
+					transition: 0.3s;
+					display: inline-block;
+					text-decoration: none;										
+				  }	//this closes button
+				  
+				  @media(max-width: 500px){
+
+					p{
+						text-align: center;
+					}//this closes p tag
+
+				  }//this closes media query 400px
+				 
+			}//this closes shpill
+
+		}//this closes topcontent
 
 
   .middle-content{
 
 	display:flex;
 	justify-content: space-evenly;
+			
+	
+			.middlewords{
+				width:40%
+			}
 
-		h3{
-			font-size: 3rem;
-			}	
+			h3{
+				font-size: 3rem;
+				}			
 		
-		table {
+			table {
 		font-family: arial, sans-serif;
 		border-collapse: collapse;
-		width: 100%;
+		width: 40%;
 	
 			td, th {
 				border: 1px solid #dddddd;
 				text-align: left;
 				padding: 8px;
-			}
-		  }
-		}
+				}
+			  }
+			  
+			  @media(max-width: 800px){
+				// width: 100%;	
+				display:flex;
+				align-content: center;
+				flex-direction: column;
+				padding: 5% 20% 5% 20%;
+
+				.middlewords{
+					width:100%;
+					// text-align: center;
+					padding: 0% 0% 20% 0%;
+
+					table{						
+						width:100%;
+					}//this closes table
+
+				}//this closes middlewords
+
+			}//this closes 800px media
+
+			@media(max-width: 500px){
+				// width: 100%;	
+				display:flex;
+				align-content: center;
+				flex-direction: column;
+				padding: 4%;
+
+				.middlewords{
+					width:100%;
+					// text-align: center;
+					padding: 0% 0% 10% 0%;
+
+					table{						
+						width:100%;
+
+						td, th {
+							border: 1px solid #dddddd;
+							text-align: left;
+							padding: 0px;
+							}
+					}//this closes table
+
+				}//this closes middlewords
+
+			}//this closes 800px media
+
+				
+
+		
+		}//this closes middlecontent
+
 
 
   table {
 	font-family: arial, sans-serif;
 	border-collapse: collapse;
-	width: 100%;
+	border-spacing: 0;
+  	width: 100%;
+  		
 
 	td, th {
 		border: 1px solid #dddddd;
@@ -156,8 +324,3 @@ h1, h2, h3, h4, h5 {
 	  text-align: center;
   }
   
-  
-  
-//   tr:nth-child(even) {
-// 	background-color: #dddddd;
-//   }
